@@ -1,0 +1,12 @@
+2. Each node is getting all the inputs from the previous layers and coming up with their own results from those inputs
+3. Generally, number of hidden layers depends on the problem, most only need a single one
+   - Number of nodes doesn't need to match, be more than, or be less than the number of inputs or outputs, there's no hard and fast rules, experimentation will be needed to find the optimum number
+4. Learned in algebra class that you can make any graph given enough variables and the right values, A + B*x + C*x^2 + ... + Z*x^25 + ... = y
+5. The matrix that makes up the nodes of the neural net can make different dimensions of graphs but lets focus on 3D for visual reasons.  Imagine a 3D graph that matches the world exactly.  Basically, you're tweaking the values of the matrix that is your neural net, checking  if the graph if you make matches the one created by your testing set, tweaking values, checking again, etc.
+6. n is number of samples, y true is the value as the testing set says it is, y pred is the what the matrix you're currently tweaking says it is
+7. gradient descent is using partial differentiation to figure out the 'direction' you want your mean squared error to go, i.e. down
+8. 
+9.
+10. PyTorch - Facebook
+  - TensorFlow - Google
+  - MXNet - Apache

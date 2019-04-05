@@ -1,0 +1,29 @@
+* start by playing 20 questions
+* show that you created a decision tree
+* kaggle.com and titanic compitition
+** usually split training sets into training/validation
+** pclass = ticket class
+** sibsp = # of siblings / spouses
+* explain Gini impurity indexing
+** given the possible labels for a set, how often a randomly chosen item will be mislabeled
+** impurity of a set is equal to 1 minus the sum over all the features of the squares of the fraction of items labeled with that feature ( 1 - sum from i to j of p sub i squared where p sub i is the count of feature i divided by the total count of all features)
+*** extremes - only label i is in the set, impurity is 0. label i is not in the set, impurity is max (but less than 1)
+*** smaller fractions contribute less to the sum
+*** find the information gain for each split - split where both sides' impurity add up to the least amount is the next split to use
+* explain decision trees can have overfitting
+** overfitting is when the model matches the data too much hindering fitting more examples or predicting categories
+** usually happens because there are more features than are necessary
+** use random forest data set as example
+* random forest is a group of decision trees that were created with different attribute sets
+** currently have it set as 50/50 if the attribute will be included but it makes sure at least 3 attributes will be in the final set
+** then have each tree vote on what they think the given thing is when given data
+** highest vote will be reported back
+* show two different decision trees created from the same titanic data set
+* run the random forest against the titanic data
+* explain that you can change the frequency of attributes appearing and the number of trees
+* adding more and more trees reaches a plateau
+* best I could do with this is 70% accuracy (sometimes) - things to try to improve is tweaking the attribute selection of Gini indexing, looking at parent nodes to not use those attributes to split on, and looking into maybe the data doesn't work with decision trees very well (e.g. random forest random forest)
+* it's treating everything like strings - difficult to have it detect it should be doing numerical comparisons
+* show examples of useful random forests
+** Nimbus - http://nimbusgem.org/
+** use pycall and use python's random forest implementation - https://www.practicalai.io/implementing-ocr-using-random-forest-classifier-ruby/
